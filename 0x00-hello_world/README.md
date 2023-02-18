@@ -1,1 +1,1 @@
-This is the 0x00-helloworld readme for my first c project
+This is the 0x00-hello_world project
