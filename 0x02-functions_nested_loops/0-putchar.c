@@ -1,6 +1,7 @@
 #include"main.h"
 /**
- * main - Print _putchar
+ * main - main function
+ * _putchar:print the alphabets putchar
  * Return: Always 0
  */
 int main(void)
@@ -15,4 +16,3 @@ int main(void)
 	_putchar('r');
 	_putchar('\n');
 	return (0);
-}
