@@ -1,12 +1,16 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * myStartupFun - Apply the constructor attribute to myStartupFun() so that it
+ *   is executed before main()
  */
-int main(void)
+void myStartupFun(void) __attribute__ ((constructor));
+
+/**
+ * myStartupFun - implementation of myStartupFun
+ */
+void myStartupFun(void)
 {
-    printf("(A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)\n");
-    return (0);
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
