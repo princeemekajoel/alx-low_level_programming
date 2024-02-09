@@ -1,25 +1,24 @@
 #include "main.h"
-
 /**
- * flip_bits - returns the required amount of bits
- * required to flip to go from one number 
- * the other
- * @n: first number.
- * @m: second number.
- *
- * Return: number of bits.
+ * flip_bits - flip to get from one number to another.
+ * @n: the first number
+ * @m: the second number
+ * Return: the number of bits you would need to flip
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int bitsNumber;
+	unsigned long int differnce, result;
+	unsigned int j, i;
 
-	for (bitsNumber = 0; n || m; n >>= 1, m >>= 1)
+	j = 0;
+	result = 1;
+	differnce = n ^ m;
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
-		if ((n & 1) != (m & 1))
-		{
-			bitsNumber++;
-		}
+		if (result == (differnce & result))
+			j++;
+		result <<= 1;
 	}
 
-	return (bitsNumber);
+	return (j);
 }
